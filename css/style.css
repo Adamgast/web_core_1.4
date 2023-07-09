@@ -1,0 +1,216 @@
+/*START======================Подключение Шрифтов======================================================================*/
+@font-face {
+	font-family: "TT Lakes";
+	font-display: swap;
+	src: url("../fonts/TTLakes-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "TT Lakes";
+	font-display: swap;
+	src: url("../fonts/TTLakes-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "TT Lakes";
+	font-display: swap;
+	src: url("../fonts/TTLakes-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+/*END======================Подключение Шрифтов======================================================================*/
+
+/*START======================Обнуление Стилей======================================================================*/
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+:focus,
+:active {
+	/*outline: none;*/
+}
+a:focus,
+a:active {
+	/*outline: none;*/
+}
+html,
+body {
+	height: 100%;
+	min-width: 320px;
+	color: #1b1c21;
+	line-height: 1;
+	font-family: "TT Lakes";
+	font-size: 14;
+}
+input,
+button,
+textarea {
+	font-family: "TT Lakes";
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+a {
+	color: inherit;
+}
+a:link,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+/*END======================Обнуление Стилей======================================================================*/
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper > main {
+	flex: 1 1 auto;
+}
+
+.wrapper > * {
+	min-width: 0;
+}
+/*=================================================================================================*/
+.header__fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 320px;
+	height: 100%;
+	background: #ffffff;
+	padding: 24px 24px 32px;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+}
+.header__top {
+	display: flex;
+	align-items: center;
+	margin-bottom: 50px;
+}
+.header__burger-btn {
+	margin-right: 17px;
+}
+.header__logo {
+}
+.header__search {
+	margin-left: auto;
+}
+.header__nav {
+	flex: 1 1 auto;
+}
+.header__list {
+}
+.header__item:not(:last-child) {
+	margin-bottom: 32px;
+}
+.header__link {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: -0.2px;
+	position: relative;
+	transition: color 0.3s ease 0s;
+}
+.header__link::before {
+	content: "";
+	display: none;
+	position: absolute;
+	top: -8px;
+	left: -24px;
+	width: 4px;
+	height: 40px;
+	background: url("../img/line.svg") 0 0 no-repeat;
+}
+.header__link.active::before {
+	display: inline-block;
+}
+.header__link.active {
+	color: #7e7e82;
+}
+.header__bottom {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: -0.2px;
+}
+.header__actions {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 16px;
+	margin-top: 24px;
+}
+.header__action:not(:last-child) {
+	margin-right: 16px;
+}
+.header__mail {
+	margin-bottom: 12px;
+	display: block;
+	transition: color 0.3s ease 0s;
+}
+.header__phone {
+	display: block;
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: -0.6px;
+	margin-bottom: 40px;
+	transition: color 0.3s ease 0s;
+}
+.header__langs {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.header__lang {
+	margin-right: 8px;
+	transition: color 0.3s ease 0s;
+}
+.header__lang.active {
+	color: #7e7e82;
+}
+@media (any-hover: hover) {
+	.header__link:hover,
+	.header__phone:hover,
+	.header__mail:hover,
+	.header__lang:hover {
+		color: #0da09b;
+	}
+}
